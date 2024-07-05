@@ -131,7 +131,7 @@
       }
 
       document.getElementById("welcome-text").innerText =
-        "<h1>How do you do, " + userName + "?</h1>";
+        "How do you do, " + userName + "?";
 
       //  XSS vulnerability #2
 
@@ -160,7 +160,7 @@
 
       const redir = params.get("goto");
       if (redir !== null && redir !== "null") {
-        document.location = redir;
+        document.location.replace(redir);
       }
     </script>
   </body>
