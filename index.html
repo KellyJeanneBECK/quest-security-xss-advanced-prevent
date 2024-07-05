@@ -124,7 +124,7 @@
         userName = userParam;
       }
 
-      document.getElementById("welcome-text").innerHTML =
+      document.getElementById("welcome-text").innerText =
         "<h1>How do you do, " + userName + "?</h1>";
 
       //  XSS vulnerability #2
@@ -135,7 +135,7 @@
       input.addEventListener("input", updateValue);
 
       function updateValue(e) {
-        log.innerHTML = e.target.value;
+        log.innerText = e.target.value;
       }
 
       //  XSS vulnerability #3
@@ -147,7 +147,7 @@
       showButton.addEventListener("click", showHTML);
 
       function showHTML() {
-        htmlOutput.innerHTML = htmlInput.value;
+        htmlOutput.innerText = htmlInput.value;
       }
 
       //  XSS vulnerability #4
